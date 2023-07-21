@@ -1,5 +1,5 @@
 import React from 'react'
-import vg from "../assests/2.webp"
+import vg from "../assests/11.svg"
 import {AiFillGoogleCircle,AiFillAmazonCircle,AiFillYoutube,AiFillInstagram} from "react-icons/ai"
 import { NavLink } from 'react-router-dom'
 import userImage from "../assests/user-image.jpg";
@@ -11,7 +11,7 @@ const Home = () => {
     <>
     <div className='home' id='#home'>
         <main>
-        <h1><span style={{color:"red",fontSize:150}}>H</span>igh<span style={{color:"red",fontSize:150}}>I</span>con</h1>
+        <h1><span style={{color:"#8E0097",fontSize:150}}>H</span>igh<span style={{color:"#8E0097",fontSize:150}}>I</span>con</h1>
             <p>Solution to all your Problems</p>
         </main>
     </div>

@@ -7,12 +7,13 @@ nav{
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    background-color: $first;
+    background-color: black;
     top: 0%;
     z-index: 10;
 
     >h1{
         text-transform: uppercase;
+        color: white;
     }
 
     >main{
@@ -21,11 +22,11 @@ nav{
         justify-content: flex-end;
 
         >a{
-            color: $dark;
+            color: white;
             margin: 1rem;
 
             &:hover{
-                color: $second;
+                color: #AA00AC;
             }
         }
     }

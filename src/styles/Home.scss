@@ -21,11 +21,11 @@
 
         >h1{
             font: 400 6rem "Lexend";
-            color: $first;
+            color: white;
         }
         >p{
             font: 900 1rem "Lexend";
-            color: $first;
+            color: white;
         }
     }
 
@@ -43,7 +43,7 @@
 .home2{
     width: 100%;
     height: 100vh;
-    background-color: $second;
+    background-color: #12011c;
     padding: 500px 0;
     display: flex;
     align-items: center;
@@ -51,7 +51,7 @@
     margin-top: -200px;
 
     >img{
-        width: 40%;
+        width: 25%;
         animation: imgUp 0.7s linear infinite alternate;
     }
 
@@ -65,7 +65,7 @@
         height: 100vh;
     }
     p{
-        color: $first;
+        color: white;
         letter-spacing: 2px;
         word-spacing: 5px;
         font: 100 1.2rem $text1;
@@ -81,14 +81,14 @@
 .home3{
     width: 100%;
     height: 120vh;
-    background-color: $second;
+    background-color: #12011c;
     margin-top: -200px;
     display: flex;
 
     >div{
         width: 70%;
         height: 100vh;
-        background-color: $first;
+        background-color: #680074;
         border-radius:0 200px  200px 0;
         display: flex;
         flex-direction: column;
@@ -103,7 +103,7 @@
             text-align: center;
             border-bottom: 2px solid $dark;
             padding: 0.5rem;
-            color: $dark;
+            color: white;
             width: 20rem;
         }
         p{
@@ -111,7 +111,8 @@
             letter-spacing: 1px;
             word-spacing: 5px;
             line-height: 170%;
-            font: 100 1.2rem $text1;
+            color: white;
+            font: 100 1.2rem ;
         }
     }
 }
@@ -119,12 +120,12 @@
 .home4{
     width: 100%;
     height: 100vh;
-    background-color: $second;
+    background-color: #12011c;
     display: flex;
     justify-content: flex-end;
 
     >div{
-        background-color: $third;
+        background-color: #AA00AC;
         border-radius: 200px 0 0 200px;
         width: 70%;
         height: 70vh;
@@ -135,10 +136,10 @@
         justify-content: center;
         
         >h1{
-            color: $first;
+            color: white;
             text-transform: uppercase;
             width: 140px;
-            border-bottom: 2px solid $first;
+            border-bottom: 2px solid white;
             padding: 0.5rem;
         }
 
@@ -153,13 +154,13 @@
                 margin: 1rem;
                 height: 8rem;
                 width: 8rem;
-                background-color: $first;
+                background-color: #12011c;
                 border-radius: 50%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                color: $dark;
+                color: white;
                 cursor: pointer;
                 transition: all 0.5s;
                 &:hover{
