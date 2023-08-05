@@ -9,31 +9,108 @@ const Contact = () => {
     email:"",
     message:"",
   });
+
+  let name,value;
+  const postUserData = (event) => {
+     name = event.target.name;
+     value = event.target.value;
+
+     setUserData({...userData,[name]:value});
+  };
+
+  //Connect with Firebase
+  const submitData = async (event) => {
+    event.preventDefault();
+    const{firstname,lastname,email,message}= userData;
+
+    if(firstname && lastname && email && message){
+
+
+    const res = await fetch("https://highicon-b8a75-default-rtdb.firebaseio.com/userDataRecords.json",
+    {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstname,
+        lastname,
+        email,
+        message,
+      })
+    })
+    if(res){
+      setUserData({
+        firstname:"",
+        lastname:"",
+        email:"",
+        message:"",
+      })
+      alert("Successfully Sent✔");
+    }
+    }
+    else{
+      alert("Please fill the data")
+  }
+  }
+
+
+
+
+
   return (
     <div className='contact'>
         <main>
             <h1>Contact Us</h1>
-            <form>
+            <form mathod="POST">
                 <div>
                     <label>FirstName</label>
-                    <input type="text" required placeholder='firstname...' />
+                    <input 
+                    type="text" 
+                    name="firstname" 
+                    id='' required 
+                    placeholder='firstname...'
+                    value={userData.firstname}
+                    onChange={postUserData}
+                     />
                 </div>
                 <div>
                     <label>LastName</label>
-                    <input type="text" required placeholder='lastname..' />
+                    <input 
+                    type="text" 
+                    name="lastname" 
+                    id='' required 
+                    placeholder='lastname..'
+                    value={userData.lastname}
+                    onChange={postUserData}
+                     />
                 </div>
 
                 <div>
                     <label>Email</label>
-                    <input type="email" required placeholder='abc@xyz.com' />
+                    <input 
+                    type="email" 
+                    name="email" 
+                    id='' required 
+                    placeholder='abc@xyz.com' 
+                    value={userData.email}
+                    onChange={postUserData}
+                    />
                 </div>
 
                 <div>
                     <label>Message</label>
-                    <input type="text" required placeholder='Tell us about your query...' />
+                    <input 
+                    type="text" 
+                    name="message" 
+                    id='' required 
+                    placeholder='Tell us about your query...' 
+                    value={userData.message}
+                    onChange={postUserData}
+                    />
                 </div>
 
-                <button type='submit'>Send</button>
+                <button type='submit' onClick={submitData}>Send</button>
             </form>
         </main>
         
