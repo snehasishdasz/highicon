@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import userImage from "../assests/user-image.jpg";
 
 const Contact = () => {
+  const[userData,setUserData]=useState({
+    firstname:"",
+    lastname:"",
+    email:"",
+    message:"",
+  });
   return (
     <div className='contact'>
         <main>
             <h1>Contact Us</h1>
             <form>
                 <div>
-                    <label>Name</label>
-                    <input type="text" required placeholder='Abc' />
+                    <label>FirstName</label>
+                    <input type="text" required placeholder='firstname...' />
+                </div>
+                <div>
+                    <label>LastName</label>
+                    <input type="text" required placeholder='lastname..' />
                 </div>
 
                 <div>
